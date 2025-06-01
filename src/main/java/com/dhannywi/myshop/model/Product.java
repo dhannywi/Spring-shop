@@ -24,6 +24,8 @@ public class Product {
     private int inventory;
     private String description;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "category_id")
     private  Category category;
 
     // when a product is deleted, all associated images will be deleted too
